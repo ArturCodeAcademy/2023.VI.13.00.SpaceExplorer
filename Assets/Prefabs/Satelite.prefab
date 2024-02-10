@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5000255274973682791}
   - component: {fileID: 7337548966116728964}
+  - component: {fileID: -8740867411499776607}
+  - component: {fileID: 7592748891380544347}
+  - component: {fileID: 6170020095149959443}
   m_Layer: 0
   m_Name: Satelite
   m_TagString: Untagged
@@ -60,6 +63,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8740867411499776607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459116718352905101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad0e0b71dbe0824a8015c9cfff503bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _idText: {fileID: 3718520377331793113}
+  _nameText: {fileID: 5031774736406524307}
+  _launchDateText: {fileID: 8989583671063135968}
+--- !u!114 &7592748891380544347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459116718352905101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566ab1372fa32a149a12fe1594e2e94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Panel>k__BackingField: {fileID: -8740867411499776607}
+--- !u!114 &6170020095149959443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459116718352905101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62661a8252965894e889f6d70e371953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minRotationSpeed: 1
+  _maxRotationSpeed: 2
 --- !u!1 &2256618902864253194
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +519,7 @@ GameObject:
   - component: {fileID: 2241860240232834767}
   - component: {fileID: 2570210151835187800}
   - component: {fileID: 61671319511435127}
+  - component: {fileID: 2625335846604282635}
   m_Layer: 5
   m_Name: WorldSpaceCanvas
   m_TagString: Untagged
@@ -564,6 +610,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2625335846604282635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765011813854945273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e3f0008b74b764b8ec0765b5d8c423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9140697961949708836
 GameObject:
   m_ObjectHideFlags: 0
