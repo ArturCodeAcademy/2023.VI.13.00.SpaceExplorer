@@ -32,10 +32,14 @@ public class HealthUI : MonoBehaviour
 	private void OnFuelValueChanged(float current, float max)
 	{
 		float percent = current / max;
-		_fill.fillAmount = percent;
-		_text.text = string.Format(_format, current, max, percent * 100);
 
-		if (_useGradient)
+		if (_fill != null)
+		_fill.fillAmount = percent;
+
+		if (_text != null)
+			_text.text = string.Format(_format, current, max, percent * 100);
+
+		if (_useGradient && _fill != null)
 			_fill.color = _gradient.Evaluate(percent);
 	}
 }
