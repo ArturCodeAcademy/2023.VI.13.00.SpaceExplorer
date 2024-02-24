@@ -4,6 +4,7 @@ using UnityEngine;
 public class Satelite : MonoBehaviour
 {
     [field: SerializeField] public SateliteInfoPanel Panel { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
 
 #if UNITY_EDITOR
 
@@ -11,6 +12,7 @@ public class Satelite : MonoBehaviour
     private void SetSateliteInfo()
     {
 		Panel ??= GetComponent<SateliteInfoPanel>();
+        Health ??= GetComponent<Health>();
 	}
 
 #endif

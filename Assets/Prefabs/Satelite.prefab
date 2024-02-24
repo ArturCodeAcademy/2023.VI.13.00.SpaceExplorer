@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Panel>k__BackingField: {fileID: -8740867411499776607}
+  <Health>k__BackingField: {fileID: 9148497248855184662}
 --- !u!114 &6170020095149959443
 MonoBehaviour:
   m_ObjectHideFlags: 0
