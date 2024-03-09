@@ -6,6 +6,7 @@ public class SateLiteSelector : MonoBehaviour
 {
     [SerializeField] private DataRequester _dataRequester;
 	[SerializeField] private TMP_Text _distanceText;
+	[SerializeField] private GameObject _interactionPrefab;
 
 	private Satelite _target;
 
@@ -29,14 +30,18 @@ public class SateLiteSelector : MonoBehaviour
 		_distanceText.transform.rotation = Quaternion.identity;
 	}
 
-	private void SelectRandomSatelite()
+	public void SelectRandomSatelite()
 	{
 		if (_target is not null)
 		{
 			_target.Health.Died -= SelectRandomSatelite;
+
+			if (_target.gameObject.TryGetComponent(out Interaction interaction))
+                Destroy(interaction.gameObject);
 		}
 
 		_target = SatelitePool.Instance[Random.Range(0, SatelitePool.Instance.SateliteCount)];
+		Instantiate(_interactionPrefab, _target.transform);
 
 		if (_target.gameObject.TryGetComponent(out SateliteRotator rotator))
 			Destroy(rotator);

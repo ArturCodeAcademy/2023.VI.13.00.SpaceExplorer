@@ -30,4 +30,11 @@ public class Health : MonoBehaviour
 		CurrentHealth += healAmount;
 		HealthValueChanged?.Invoke(CurrentHealth, MaxHealth);
 	}
+
+	public void Kill()
+	{
+		CurrentHealth = 0;
+		HealthValueChanged?.Invoke(CurrentHealth, MaxHealth);
+		Died?.Invoke();
+	}
 }

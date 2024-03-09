@@ -11,15 +11,16 @@ public class PasswordGame : BaseMiniGame
 
 	private const int MAX_DIGITS = 4;
 
-	private void Awake()
-	{
-		_password = Random.Range(0, 10000).ToString("0000");
-		_passwordText.text = _password;
-		_inputText.text = "____";
-		_input = string.Empty;
-	}
+    public override void StartGame(RocketController controller)
+    {
+        base.StartGame(controller);
+        _password = Random.Range(0, 10000).ToString("0000");
+        _passwordText.text = _password;
+        _inputText.text = "____";
+        _input = string.Empty;
+    }
 
-	public void AddDigit(int digit)
+    public void AddDigit(int digit)
 	{
 		if (_input.Length < MAX_DIGITS)
 		{
